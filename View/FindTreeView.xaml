@@ -1,0 +1,60 @@
+﻿<UserControl
+    x:Class="M788_1069.View.FindTreeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:M788_1069.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="clr-namespace:M788_1069.View"
+    d:DesignHeight="546.751"
+    d:DesignWidth="551.625"
+    mc:Ignorable="d">
+
+    <StackPanel Margin="0,0,0,10">
+        <GroupBox>
+            <GroupBox.Header>
+                <Button Background="Lavender">Выбор типов расчётных коэффициентов</Button>
+            </GroupBox.Header>
+            <StackPanel>
+                <CheckBox
+                    Name="CheckBox1"
+                    Margin="3"
+                    HorizontalAlignment="Left"
+                    IsChecked="True">
+                    Расчетные коэффициенты электрических нагрузок (Ки и cosfi) по оборудованию
+                </CheckBox>
+                <CheckBox
+                    Name="CheckBox2"
+                    Width="534"
+                    Margin="3"
+                    HorizontalAlignment="Left">
+                    Расчетные коэффициенты электрических нагрузок (cosfi и Кс) в целом
+                </CheckBox>
+            </StackPanel>
+        </GroupBox>
+        <Label Margin="5,5,5,0" Foreground="Blue">Ключевое слово</Label>
+        <TextBox
+            Width="530"
+            Margin="10,0,0,0"
+            HorizontalAlignment="Left"
+            Text="{Binding TypeChar, UpdateSourceTrigger=PropertyChanged}">
+            <TextBox.ToolTip>
+                <ToolTip
+                    Width="Auto"
+                    Height="Auto"
+                    Foreground="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}">
+                    <StackPanel>
+                        <TextBlock TextAlignment="Center"><Run Text="Введите в строку ключевое словово для поиска оборудования" /></TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </TextBox.ToolTip>
+        </TextBox>
+        <Grid>
+            <TreeView x:Name="tvDepts">
+                <TreeView.Resources />
+            </TreeView>
+        </Grid>
+    </StackPanel>
+
+
+</UserControl>

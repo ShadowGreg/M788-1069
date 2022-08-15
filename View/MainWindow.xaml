@@ -1,0 +1,20 @@
+﻿<Window
+    x:Class="M788_1069.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:View="clr-namespace:M788_1069.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:M788_1069"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="clr-namespace:M788_1069.View"
+    xmlns:viewModel="clr-namespace:M788_1069.ViewModel"
+    Title="MainWindow"
+    Width="569"
+    Height="572"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <viewModel:ViewData />
+    </Window.DataContext>
+    <View:FindTreeView />
+
+</Window>
